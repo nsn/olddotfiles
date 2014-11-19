@@ -1,0 +1,69 @@
+# editor settings
+set editor = "vim '+/^$'"
+
+# Basic config, you can leave this as is
+set imap_check_subscribed
+set mail_check = 120
+set timeout = 300
+set imap_keepalive = 300
+
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set certificate_file=~/.mutt/certificates
+
+set move = no
+set sort = 'threads'
+set auto_tag = yes
+
+hdr_order Date From To Cc
+
+auto_view text/html
+bind editor <Tab> complete-query
+bind editor ^T complete
+bind editor <space> noop 
+
+
+set envelope_from                        # which from?
+set edit_headers    = yes                # show headers when composing
+set fast_reply                           # skip to compose when replying
+unset reply_self
+set reply_to                             # reply to Reply to: field
+set askcc = no                           # ask for CC:
+set fcc_attach                           # save attachments with the body
+set mime_forward    = ask-no             # ask to forward attachments as part of body
+set mime_forward_rest                    # forwarding multiple attachments of a MIME message from the recvattach menu
+set forward_format  = "Fwd: %s"          # format of subject when forwarding
+set forward_decode                       # decode when forwarding
+set attribution     = "On %d, %n wrote:" # format of quoting header
+set reverse_name                         # reply as whomever it was to
+set include = yes                        # include message in replies
+set forward_quote                        # include message in forwards
+
+# View Options ------------------------------------
+set tilde                               # pad bottom blank lines when in page view
+set pager_index_lines   = 10            # Show 2 messages on either side of the message I'm reading.
+set pager_context       = 5             # Paging down a message leaves 5 lines of overlap, so you don't get lost.
+set pager_stop                          # don't go to next message automatically
+set menu_scroll                         # scroll in menus
+set arrow_cursor                        # Changes the `bar' cursor to an arrow.  Default is the bar.
+set indent_str          = "> "
+unset markers                           # no ugly plus signs
+set quote_regexp        = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+alternative_order       text/enriched text/plain text/html        #In which order to show the body parts (I leave HTML for last)
+set resolve
+
+
+# color schmemes
+source $HOME/dotfiles/mutt/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
+
+# accounts
+macro index <f2> '<sync-mailbox><enter-command>source $HOME/dotfiles/mutt/account.gmail<enter><change-folder>!<enter>'
+macro index <f3> '<sync-mailbox><enter-command>source $HOME/dotfiles/mutt/account.gfexchange<enter><change-folder>!<enter>'
+
+set realname = "Michael Bayer"
+source $HOME/dotfiles/mutt/account.gmail
+#source $HOME/dotfiles/mutt/account.gfexchange
+
+#key bindings
+source $HOME/dotfiles/mutt/bindings
+

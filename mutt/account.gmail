@@ -1,0 +1,20 @@
+# A basic .muttrc for use with Gmail
+
+# Receiving 
+set imap_user = `lpass show --username 265133563`
+set imap_pass = `lpass show --password 265133563`
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = +INBOX
+set postponed = +Drafts
+set record = "+[Google Mail]/Sent Mail"
+#set postponed = "+[Gmail]/Drafts"
+
+# Sending
+set from = "nsn@nightspawn.com"
+set hostname = "nightspawn.com"
+set smtp_url = "smtp://nightspawn.com@googlemail.com@smtp.gmail.com:587/"
+set smtp_pass = `lpass show --password 265133563`
+
+set ssl_force_tls = yes
+
+

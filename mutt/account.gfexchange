@@ -1,0 +1,16 @@
+# A basic .muttrc for use with Gmail
+
+# Change the following six lines to match your Gmail account details
+set imap_user = "michael.bayer"
+set imap_pass = `lpass show --password 1519527976`
+set from = "michael.bayer@gameforge.de"
+set realname = "Michael Bayer"
+set hostname = "gameforge.com"
+set postponed = "imaps://exchange.gameforge.com:993/Drafts"
+
+set record = "imaps://exchange.gameforge.com:993/Sent Items"
+set folder = "imaps://exchange.gameforge.com:993"
+set spoolfile = "imaps://exchange.gameforge.com:993/INBOX"
+
+
+
