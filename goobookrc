@@ -1,0 +1,19 @@
+#!/bin/sh
+# this goobookrc is an executable b/c I don't want cleartext usernames or passwords in
+# my dotfiles. There's the "passwordeval" option but that would still leave the username as cleartext
+
+
+
+#sed \
+#-e "s/DEFAULT_USER/`lpass show --username 265133563`/g" \
+#-e "s/DEFAULT_PASS/`lpass show --password 265133563`/g" \
+#goobookrc.template
+
+
+
+
+echo "[DEFAULT]"
+echo "email: $(lpass show --username 265133563)"
+echo "password: $(lpass show --password 265133563)"
+
+
