@@ -7,7 +7,7 @@ set folder = "imaps://imap.gmail.com:993"
 set spoolfile = +INBOX
 set postponed = +Drafts
 set record = "+[Google Mail]/Sent Mail"
-#set postponed = "+[Gmail]/Drafts"
+set query_command="~/.local/bin/goobook -c ~/dotfiles/goobookrc query '%s'"  #query google contacts
 
 # Sending
 set from = "nsn@nightspawn.com"

@@ -2,6 +2,7 @@
 bind index,pager <C-Down> sidebar-next 
 bind index,pager <C-Up> sidebar-prev 
 bind index,pager <C-Right> sidebar-open
+bind editor <Tab> complete-query
 
 
 
