@@ -1,5 +1,5 @@
 # editor settings
-set editor = "vim '+/^$'"
+set editor = "vim -c 'let g:goobookrc=\"~/dotfiles/goobookrc\"' -S ~/dotfiles/vim/mail.vim -c '+/^$'"
 
 # Basic config, you can leave this as is
 set imap_check_subscribed
