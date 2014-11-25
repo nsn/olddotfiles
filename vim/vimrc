@@ -1,0 +1,9 @@
+" copy this file to ~/.vimrc
+
+
+so ~/dotfiles/vim/basics.vim
+so ~/dotfiles/vim/maps.vim
+
+
+
+
