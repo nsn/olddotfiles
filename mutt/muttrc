@@ -54,7 +54,7 @@ set resolve
 
 
 # color schmemes
-source $HOME/dotfiles/mutt/mutt-colors-solarized/mutt-colors-solarized-light-16.muttrc
+source $HOME/dotfiles/mutt/mutt-colors-solarized/mutt-colors-solarized-dark-16.muttrc
 
 # accounts
 macro index <f2> '<sync-mailbox><enter-command>source $HOME/dotfiles/mutt/account.gmail<enter><change-folder>!<enter>'
